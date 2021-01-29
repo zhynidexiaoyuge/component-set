@@ -1,0 +1,43 @@
+/* 菜单颜色以及背景色   ----------------------------------start---------------------------------- */
+.site-menu .el-menu,
+.site-menu .el-menu-item,
+.site-menu .el-submenu__title,
+.site-menu .el-menu,
+.site-menu .el-submenu .el-menu,
+.site-menu-pop .el-menu,
+.site-menu-pop .el-menu-item,
+.site-menu-pop .el-submenu__title {
+  background: var(--site-menu-bg) !important;
+  color: var(--site-menu-txt) !important;
+}
+
+.site-menu .el-menu-item:hover,
+.site-menu .el-submenu__title:hover,
+.site-menu-pop .el-menu-item:hover,
+.site-menu-pop .el-submenu__title:hover {
+  background: var(--site-menu-hover-bg) !important;
+  color: var(--site-menu-hover-txt) !important;
+}
+
+.site-menu .el-menu-item.is-active,
+.site-menu-pop .el-menu-item.is-active {
+  background: var(--site-menu-hover-bg) !important;
+  color: var(--site-menu-hover-txt) !important;
+}
+
+.site-menu.el-menu:not(.el-menu--horizontal) .el-menu-item.is-active:before,
+.site-menu-pop.el-menu:not(.el-menu--horizontal) .el-menu-item.is-active:before {
+  background: var(--site-menu-hover-txt) !important;
+}
+
+.site-menu.el-menu--horizontal>.el-menu-item.is-active,
+.site-menu.el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
+  border-color: var(--site-menu-hover-txt);
+}
+
+.site-menu .el-submenu__title i,
+.site-menu-pop .el-submenu__title i {
+  color: var(--site-menu-txt);
+}
+
+/* 菜单颜色以及背景色   ----------------------------------end---------------------------------- */
