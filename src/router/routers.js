@@ -51,33 +51,33 @@ function filterAsyncRouter(asyncRouterMap) {
 filterAsyncRouter(menuList);
 const routers = routerArr;
 export default [{
-    path: '/',
-    component: Layout,
-    redirect: '/home_page',
-    children: [{
-      path: 'home_page',
-      name: '首页',
-      component: () => import('../views/home_page'),
-    }]
-  },
-  {
-    path: '/login',
-    component: () => import('../views/login'),
-    hidden: true
-  },
-  ...routers,
-  // {
-  //   path: '*',
-  //   component: () => import('../views/error-page/404')
-  // },
-  {
-    path: '*',
-    component: Layout,
-    redirect: '/404',
-    children: [{
-      path: '404',
-      name: '页面找不到',
-      component: () => import('../views/error-page/404')
-    }]
-  }
+  path: '/',
+  component: Layout,
+  redirect: '/home_page',
+  children: [{
+    path: 'home_page',
+    name: '首页',
+    component: () => import('../views/home_page'),
+  }]
+},
+{
+  path: '/login',
+  component: () => import('../views/login'),
+  hidden: true
+},
+...routers,
+// {
+//   path: '*',
+//   component: () => import('../views/error-page/404')
+// },
+{
+  path: '*',
+  component: Layout,
+  redirect: '/404',
+  children: [{
+    path: '404',
+    name: '页面找不到',
+    component: () => import('../views/error-page/404')
+  }]
+}
 ]
